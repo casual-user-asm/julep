@@ -17,7 +17,7 @@ def translate_file(file, code_lang):
 
 
 if __name__ == "__main__":
-    file = "README.md"
+    file = "../README.md"
     languages = ["zh", "fr", "ja"]
     for lang in languages:
         translate_file(file, lang)
