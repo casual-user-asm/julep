@@ -23,4 +23,4 @@ jobs:
           pip install translate
 
       - name: Run translation script
-        run: python scripts/translate_readme.py
+        run: python translate_readme.py
