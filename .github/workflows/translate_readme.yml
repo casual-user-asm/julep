@@ -24,3 +24,13 @@ jobs:
 
       - name: Run translation script
         run: python translate_readme.py
+
+      - name: Commit and push translated files
+        run: |
+          git config --local user.name "GitHub Action"
+          git config --local user.email "action@github.com"
+          git add README-*.md
+          git commit -m "Update translated README files" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
